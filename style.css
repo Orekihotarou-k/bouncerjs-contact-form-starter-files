@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* CUSTOM PROPETIES */
+:root {
+    --clr-red: #ff7a7a ;
+    --clr-green: #38cc8c;
+    --clr-blue: #6055a5;
+    --clr-dark-blue: #3e3c49 ;
+    --clr-grayish-blue: #b9b6d3;
+
+    --ff-main: "Poppins", sans-serif;
+    --fs-title: 3.25rem;
+    --fs-body: 1rem;
+
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+}
+
+
+/* RESET */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    font-family: var(--ff-main);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-400);
+    line-height: 1.5;
+    color: var(--clr-dark-blue);
+    background: url(images/bg-intro-desktop.png) no-repeat var(--clr-red);
+    background-size: cover;
+}
+
+
+
+/* LAYOUT STYLES */
+main {
+    display: grid;
+    place-items: center;
+    padding: clamp(2rem, 10vh, 8rem);
+}
+
+.container {
+    place-items: center;
+    max-width: 73rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.container > * {
+    width: 100%;
+}
+
+
+/* TYPOGRAPHY */
+.title {
+    font-size: var(--fs-title);
+    font-weight: var(--fw-700);
+    line-height: 1.1;
+    color: #fff;
+    margin-bottom: 1.75rem;
+}
+
+.content {
+    color: white;
+}
+
+input {
+    font: inherit;
+    font-weight: var(--fw-600);
+}
+
+button {
+    font: inherit;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: var(--fw-600);
+}
+
+.confirm {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: var(--clr-grayish-blue);
+    font-weight: var(--fw-500);
+    font-size: .75rem;
+}
+
+.confirm span {
+    color: var(--clr-red);
+    font-weight: var(--fw-600);
+}
+
+
+
+/* COMPONENTS */
+.trial {
+    text-align: center;
+    color: var(--clr-grayish-blue);
+    padding: 1.5rem;
+    border-radius: .4rem;
+    box-shadow: 0 10px 0 hsla(0, 0%, 0%, 0.2);
+    background: var(--clr-blue);
+    margin-bottom: 2rem;
+}
+
+.trial span {
+    color: #fff;
+    font-weight: var(--fw-600);
+}
+
+input {
+    width: 100%;
+    border-radius: .4rem;
+    padding: 1.25rem;
+    padding-left: 2rem;
+    border: 1px solid var(--clr-grayish-blue);
+}
+
+input:focus-visible {
+    outline: 1px solid var(--clr-dark-blue);
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 1.25rem;
+    background: var(--clr-green);
+    border-radius: .4rem;
+    border: none;
+    box-shadow: 0 5px 0 hsla(0, 0%, 0%, 0.2);
+}
+
+
+
+/* GENERAL STYLES */
+.contact-form {
+    display: grid;
+    gap: 1.25rem;
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: .5rem;
+}
+
+
+/* MEDIA QUERY */
+@media screen and (max-width: 950px) {
+    main {
+        padding: 2rem;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .container > *:nth-child(1) {
+        width: 70%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    :root {
+        --fs-title: 2rem;
+    }
+
+    main {
+        padding: 4rem 1rem;
+    }
+
+    .container > *:nth-child(1) {
+        width: 100%;
+    }
+
+    input {
+        padding: 1rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+}
+
+/**
+ * Form Validation Errors
+ */
+ .error {
+	border-color: var(--clr-red);
+}
+
+.error-message {
+    font-size: .8rem;
+    text-align: right;
+	color: var(--clr-red);
+	font-style: italic;
+    margin-top: .5rem;
+}

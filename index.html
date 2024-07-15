@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Always get the latest version -->
+<!-- Not recommended for production sites! -->
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/bouncer/dist/bouncer.polyfills.min.js"></script>
+
+<!-- Get minor updates and patch fixes within a major version -->
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/bouncer@1/dist/bouncer.polyfills.min.js"></script>
+
+<!-- Get patch fixes within a minor version -->
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/bouncer@1.0/dist/bouncer.polyfills.min.js"></script>
+
+<!-- Get a specific version -->
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/bouncer@1.0.0/dist/bouncer.polyfills.min.js"></script>
+
+<script src="script.js" defer></script>
+
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+<body>
+
+  <main>
+    <div class="container">
+      <div>
+        <h1 class="title">Learn to code by watching others</h1>
+        <p class="content">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable. </p>
+      </div>
+
+      
+      <div>
+        <div class="trial"><span>Try it free 7 days</span> then $20/mo. thereafter</div>
+        <form class="contact-form">
+          <div class="input-item">
+            <input
+              type="text"
+              placeholder="First Name"
+              id="firstName"
+              class="firstName"
+              aria-label="first name"
+              required
+              >
+          </div>
+          <div class="input-item">
+            <input
+              type="text"
+              placeholder="Last Name"
+              id="lastName"
+              class="lastName"
+              aria-label="Last name"
+              required
+              >
+          </div>
+          <div class="input-item">
+            <input
+              type="email"
+              placeholder="Email Address"
+              id="emailAddress"
+              class="emailAddress"
+              aria-label="Email Address"
+              required
+              >
+          </div>
+          <div class="input-item">
+            <input
+              type="password"
+              placeholder="Password"
+              id="password"
+              class="password"
+              aria-label="Password"
+              required
+              name="password"
+              minlength="5"
+              >
+          </div>
+          <button type="submit">CLAIM YOUR FREE TRIAL</button>
+          <small class="confirm">By clicking the button, you are agreeing to our <span>Terms and Services</span></small>
+        </form>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
